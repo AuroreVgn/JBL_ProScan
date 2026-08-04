@@ -46,7 +46,7 @@ Lovelace card available **here**.
 ### HACS (recommended)
 
 1. Add to HACS
-   - automatically [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?category=integration&repository=JBL_ProScan&owner=AuroreVgn) <br />
+   - automatically [![Ouvrir ce dépôt dans HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=AuroreVgn&repository=JBL_ProScan&category=integration) <br />
    - manually
       - HACS :arrow_right: Intégrations :arrow_right: Menu '...' :arrow_right: Dépôts personnalisés
       - Repo: `https://github.com/AuroreVgn/JBL_ProScan`
