@@ -134,6 +134,9 @@ class JBLProScanConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     entry_data = {
                         **self._credentials,
                         CONF_AQUARIUM_ID: aquarium_id,
+                        CONF_REMINDER_DAYS: user_input.get(
+                            CONF_REMINDER_DAYS, DEFAULT_REMINDER_DAYS
+                        ),
                     }
                     return self.async_create_entry(
                         title=data.aquarium_name,
@@ -156,7 +159,7 @@ class JBLProScanConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     ),
                     vol.Required(
                         CONF_REMINDER_DAYS,
-                        default=self._config_entry.options.get(CONF_REMINDER_DAYS, DEFAULT_REMINDER_DAYS),
+                        default=DEFAULT_REMINDER_DAYS,
                     ): NumberSelector(
                         NumberSelectorConfig(
                             min=MIN_REMINDER_DAYS,

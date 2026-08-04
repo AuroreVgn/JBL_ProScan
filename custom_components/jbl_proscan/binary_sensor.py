@@ -131,7 +131,12 @@ class JBLProScanBinarySensor(CoordinatorEntity[JBLProScanCoordinator], BinarySen
 
     @property
     def is_on(self) -> bool | None:
-        days = int(self._entry.options.get(CONF_REMINDER_DAYS, DEFAULT_REMINDER_DAYS))
+        days = int(
+            self._entry.options.get(
+                CONF_REMINDER_DAYS,
+                self._entry.data.get(CONF_REMINDER_DAYS, DEFAULT_REMINDER_DAYS),
+            )
+        )
         return self.entity_description.value_fn(self.coordinator.data, days)
 
     @property
@@ -143,5 +148,10 @@ class JBLProScanBinarySensor(CoordinatorEntity[JBLProScanCoordinator], BinarySen
             "recommended_threshold": self.entity_description.threshold_label,
         }
         if self.entity_description.key == "analysis_overdue":
-            attrs["reminder_days"] = int(self._entry.options.get(CONF_REMINDER_DAYS, DEFAULT_REMINDER_DAYS))
+            attrs["reminder_days"] = int(
+                self._entry.options.get(
+                    CONF_REMINDER_DAYS,
+                    self._entry.data.get(CONF_REMINDER_DAYS, DEFAULT_REMINDER_DAYS),
+                )
+            )
         return attrs
