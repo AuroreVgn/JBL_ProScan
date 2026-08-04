@@ -1,91 +1,107 @@
-# JBL ProScan for Home Assistant
+# JBL ProScan
 
-Unofficial Home Assistant integration and Lovelace card for measurements saved by the JBL ProScan application.
+[![GitHub Release][releases-shield]][releases]
+[![License][license-shield]](LICENSE)
+[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2026.3%2B-41BDF5.svg?style=flat-square&logo=homeassistant)](https://www.home-assistant.io/)
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=flat-square)](https://hacs.xyz/)
+[![Maintainers](https://img.shields.io/badge/maintainers-@AuroreVgn%20-blue.svg?style=flat-square)](https://github.com/AuroreVgn)
 
-> This project is not affiliated with or endorsed by JBL GmbH & Co. KG. JBL and ProScan are trademarks of their respective owner.
-
-## Version
-
-- Integration: **1.0.0**
-- Lovelace card: **1.0.0**
+A Home Assistant custom integration for **JBL ProScan** allowing you to retrieve your **pond** or **aquarium** water analyses directly from your myJBL account.
 
 ## Features
 
-- Login to myJBL with a standard Home Assistant config flow.
-- Automatic discovery and selection of a pond or aquarium.
-- pH, KH, GH, NO₂, NO₃, CO₂ and chlorine sensors.
-- Preservation of comparison signs such as `>7` and `<0.5`.
-- Full analysis history exposed by `sensor.<name>_historique`.
-- Multilingual integration and card: French, English, German, Spanish, Italian, Dutch and Portuguese.
-- Responsive Lovelace card with visual editor, quality indicators and interactive history graph.
+- Secure login to **myJBL**
+- Automatic pond selection
+- Retrieve the latest analysis
+- Retrieve the complete analysis history
+- Sensors for:
+  - pH
+  - KH
+  - GH
+  - NO₂
+  - NO₃
+  - CO₂
+  - Chlorine
 
-## Repository structure
+- Number of recorded analyses
+- Last analysis date
+- Days since the last analysis
+-  Multi-language support : 🇫🇷 🇬🇧 🇩🇪 🇪🇸 🇮🇹 🇳🇱 🇵🇹
 
-```text
-custom_components/jbl_proscan/    Home Assistant integration
-dist/jbl-proscan-card.js          Lovelace card release file
-www/jbl-proscan-card.js           Copy for manual installation
-brands/custom_integrations/       Files prepared for home-assistant/brands
-```
-
-## Manual installation
+## Screenshots
 
 ### Integration
+<img width="285" height="211,5" alt="image" src="https://github.com/user-attachments/assets/09e357ca-72af-489c-bd66-f16c78006d31" />
 
-Copy:
+### Entities
+<img width="151" height="264" alt="image" src="https://github.com/user-attachments/assets/216a5961-32bb-49de-a12e-7988123f3f2e" />
 
-```text
-custom_components/jbl_proscan
+### Dashboard
+<img width="242" height="291" alt="image" src="https://github.com/user-attachments/assets/6cddf462-4f09-4289-af0e-04f7684302eb" />
+
+Lovelace card available **here**.
+
+## Installation
+
+### HACS (recommended)
+
+1. Add to HACS
+   - automatically [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?category=integration&repository=JBL_ProScan&owner=AuroreVgn) <br />
+   - manually
+      - HACS :arrow_right: Intégrations :arrow_right: Menu '...' :arrow_right: Dépôts personnalisés
+      - Repo: `https://github.com/AuroreVgn/JBL_ProScan`
+      - Category: `Integration`
+3. Download
+   - HACS :arrow_right: Integration :arrow_right: JBL_ProScan :arrow_right: Download
+4. Restart Home Assistant
+
+### Configuration
+
+Go to
+
+```
+Settings
+→ Devices & Services
+→ Add Integration
+→ JBL ProScan
 ```
 
-to:
+Enter:
 
-```text
-/config/custom_components/jbl_proscan
-```
+- myJBL email
+- myJBL password
 
-Restart Home Assistant, then add **JBL ProScan** from **Settings → Devices & services**.
+Then choose the pond (or aquarium) to import.
 
-### Lovelace card
 
-Copy:
+## Entities
 
-```text
-www/jbl-proscan-card.js
-```
+The integration creates the following sensors.
 
-to:
+| Sensor | Unit |
+|---------|------|
+| pH | - |
+| KH | °dKH |
+| GH | °dGH |
+| NO₂ | mg/L |
+| NO₃ | mg/L |
+| CO₂ | mg/L |
+| Chlorine | mg/L |
+| Last analysis | Date |
+| Days since last analysis | day |
+| Number of analyses | - |
 
-```text
-/config/www/jbl-proscan-card.js
-```
+## Credits
 
-Add this Dashboard resource as a JavaScript module:
+Developed by **AuroreVgn**
+Special thanks to the Home Assistant community.
+This project is **not affiliated with JBL GmbH & Co. KG**.
 
-```text
-/local/jbl-proscan-card.js?v=1.0.0
-```
 
-Then add **JBL ProScan** through the visual card picker or use:
+## License
+This project is distributed under the MIT License.
+``LICENSE``
 
-```yaml
-type: custom:jbl-proscan-card
-entity: sensor.bassin_historique
-title: Bassin — JBL ProScan
-measurements: 100
-show_co2: true
-stale_warning_days: 14
-stale_critical_days: 30
-```
-
-## Logo
-
-The folder `brands/custom_integrations/jbl_proscan` is ready to be copied into a fork of the `home-assistant/brands` repository. These files are not read directly from this repository by Home Assistant.
-
-## GitHub graphical upload
-
-Create an empty public repository without generating a README, licence or `.gitignore`. Extract this archive and upload all files and folders from its root using **Add file → Upload files**.
-
-## Important HACS note
-
-HACS treats integrations and dashboard cards as different repository categories. This combined repository is designed for GitHub publication and manual installation. For one-click HACS installation of both parts, publish the integration and card as two separate repositories.
+[releases-shield]: https://img.shields.io/github/v/release/AuroreVgn/JBL_ProScan?style=flat-square
+[releases]: https://github.com/AuroreVgn/JBL_ProScan/releases
+[license-shield]: https://img.shields.io/github/license/AuroreVgn/JBL_ProScan?style=flat-square
