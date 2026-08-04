@@ -3,14 +3,18 @@
 from datetime import timedelta
 
 DOMAIN = "jbl_proscan"
-PLATFORMS = ["sensor"]
+PLATFORMS = ["sensor", "binary_sensor"]
 
 CONF_EMAIL = "email"
 CONF_PASSWORD = "password"
 CONF_AQUARIUM_ID = "aquarium_id"
 CONF_SCAN_INTERVAL = "scan_interval"
+CONF_REMINDER_DAYS = "reminder_days"
 
 DEFAULT_SCAN_INTERVAL = 360
+DEFAULT_REMINDER_DAYS = 30
+MIN_REMINDER_DAYS = 1
+MAX_REMINDER_DAYS = 365
 MIN_SCAN_INTERVAL = 15
 MAX_SCAN_INTERVAL = 1440
 

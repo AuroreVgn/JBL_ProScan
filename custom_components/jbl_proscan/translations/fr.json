@@ -36,23 +36,76 @@
       "init": {
         "title": "Options JBL ProScan",
         "data": {
-          "scan_interval": "Intervalle d’actualisation"
+          "scan_interval": "Intervalle d’actualisation",
+          "reminder_days": "Rappel après (days)"
         }
       }
     }
   },
   "entity": {
     "sensor": {
-      "ph": {"name": "pH"},
-      "kh": {"name": "Dureté carbonatée (KH)"},
-      "gh": {"name": "Dureté totale (GH)"},
-      "no2": {"name": "Nitrites (NO₂)"},
-      "no3": {"name": "Nitrates (NO₃)"},
-      "co2": {"name": "Dioxyde de carbone (CO₂)"},
-      "chlorine": {"name": "Chlore"},
-      "last_analysis": {"name": "Dernière analyse"},
-      "measurement_count": {"name": "Nombre d’analyses"},
-      "history": {"name": "Historique"}
+      "ph": {
+        "name": "pH"
+      },
+      "kh": {
+        "name": "Dureté carbonatée (KH)"
+      },
+      "gh": {
+        "name": "Dureté totale (GH)"
+      },
+      "no2": {
+        "name": "Nitrites (NO₂)"
+      },
+      "no3": {
+        "name": "Nitrates (NO₃)"
+      },
+      "co2": {
+        "name": "Dioxyde de carbone (CO₂)"
+      },
+      "chlorine": {
+        "name": "Chlore"
+      },
+      "last_analysis": {
+        "name": "Dernière analyse"
+      },
+      "history": {
+        "name": "Historique"
+      }
+    },
+    "binary_sensor": {
+      "ph_ok": {
+        "name": "pH OK"
+      },
+      "kh_ok": {
+        "name": "Dureté carbonatée (KH) OK"
+      },
+      "gh_ok": {
+        "name": "Dureté totale (GH) OK"
+      },
+      "no2_high": {
+        "name": "Nitrites (NO₂) élevés"
+      },
+      "no3_high": {
+        "name": "Nitrates (NO₃) élevés"
+      },
+      "chlorine_high": {
+        "name": "Chlore élevé"
+      },
+      "analysis_overdue": {
+        "name": "Analyse en retard"
+      }
+    }
+  },
+  "services": {
+    "refresh": {
+      "name": "Actualiser les données JBL ProScan",
+      "description": "Actualise immédiatement les données JBL ProScan depuis myJBL.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Entrée de configuration",
+          "description": "Entrée facultative. Laissez vide pour actualiser tous les bassins et aquariums."
+        }
+      }
     }
   }
 }

@@ -36,7 +36,8 @@
       "init": {
         "title": "JBL ProScan-opties",
         "data": {
-          "scan_interval": "Vernieuwingsinterval"
+          "scan_interval": "Vernieuwingsinterval",
+          "reminder_days": "Herinnering na (days)"
         }
       }
     }
@@ -67,11 +68,43 @@
       "last_analysis": {
         "name": "Laatste analyse"
       },
-      "measurement_count": {
-        "name": "Aantal analyses"
-      },
       "history": {
         "name": "Geschiedenis"
+      }
+    },
+    "binary_sensor": {
+      "ph_ok": {
+        "name": "pH OK"
+      },
+      "kh_ok": {
+        "name": "Carbonaathardheid (KH) OK"
+      },
+      "gh_ok": {
+        "name": "Totale hardheid (GH) OK"
+      },
+      "no2_high": {
+        "name": "Nitriet (NO₂) hoog"
+      },
+      "no3_high": {
+        "name": "Nitraat (NO₃) hoog"
+      },
+      "chlorine_high": {
+        "name": "Chloor hoog"
+      },
+      "analysis_overdue": {
+        "name": "Analyse te laat"
+      }
+    }
+  },
+  "services": {
+    "refresh": {
+      "name": "JBL ProScan-gegevens vernieuwen",
+      "description": "Vernieuwt JBL ProScan-gegevens onmiddellijk vanuit myJBL.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Configuratie-item",
+          "description": "Optioneel. Laat leeg om alle vijvers en aquaria te vernieuwen."
+        }
       }
     }
   }

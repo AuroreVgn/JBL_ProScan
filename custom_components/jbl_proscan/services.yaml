@@ -1,0 +1,11 @@
+refresh:
+  name: Refresh JBL ProScan data
+  description: Immediately refresh JBL ProScan data from myJBL.
+  fields:
+    config_entry_id:
+      name: Configuration entry
+      description: Optional configuration entry ID. Leave empty to refresh all configured ponds and aquariums.
+      required: false
+      selector:
+        config_entry:
+          integration: jbl_proscan

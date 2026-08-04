@@ -36,7 +36,8 @@
       "init": {
         "title": "JBL ProScan-Optionen",
         "data": {
-          "scan_interval": "Aktualisierungsintervall"
+          "scan_interval": "Aktualisierungsintervall",
+          "reminder_days": "Erinnerung nach (days)"
         }
       }
     }
@@ -67,11 +68,43 @@
       "last_analysis": {
         "name": "Letzte Analyse"
       },
-      "measurement_count": {
-        "name": "Anzahl der Analysen"
-      },
       "history": {
         "name": "Verlauf"
+      }
+    },
+    "binary_sensor": {
+      "ph_ok": {
+        "name": "pH OK"
+      },
+      "kh_ok": {
+        "name": "Karbonathärte (KH) OK"
+      },
+      "gh_ok": {
+        "name": "Gesamthärte (GH) OK"
+      },
+      "no2_high": {
+        "name": "Nitrit (NO₂) hoch"
+      },
+      "no3_high": {
+        "name": "Nitrat (NO₃) hoch"
+      },
+      "chlorine_high": {
+        "name": "Chlor hoch"
+      },
+      "analysis_overdue": {
+        "name": "Analyse überfällig"
+      }
+    }
+  },
+  "services": {
+    "refresh": {
+      "name": "JBL-ProScan-Daten aktualisieren",
+      "description": "Aktualisiert die JBL-ProScan-Daten sofort von myJBL.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Konfigurationseintrag",
+          "description": "Optional. Leer lassen, um alle Teiche und Aquarien zu aktualisieren."
+        }
       }
     }
   }

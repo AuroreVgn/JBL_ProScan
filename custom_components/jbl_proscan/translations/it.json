@@ -36,7 +36,8 @@
       "init": {
         "title": "Opzioni JBL ProScan",
         "data": {
-          "scan_interval": "Intervallo di aggiornamento"
+          "scan_interval": "Intervallo di aggiornamento",
+          "reminder_days": "Promemoria dopo (days)"
         }
       }
     }
@@ -67,11 +68,43 @@
       "last_analysis": {
         "name": "Ultima analisi"
       },
-      "measurement_count": {
-        "name": "Numero di analisi"
-      },
       "history": {
         "name": "Cronologia"
+      }
+    },
+    "binary_sensor": {
+      "ph_ok": {
+        "name": "pH OK"
+      },
+      "kh_ok": {
+        "name": "Durezza carbonatica (KH) OK"
+      },
+      "gh_ok": {
+        "name": "Durezza totale (GH) OK"
+      },
+      "no2_high": {
+        "name": "Nitriti (NO₂) alti"
+      },
+      "no3_high": {
+        "name": "Nitrati (NO₃) alti"
+      },
+      "chlorine_high": {
+        "name": "Cloro alto"
+      },
+      "analysis_overdue": {
+        "name": "Analisi in ritardo"
+      }
+    }
+  },
+  "services": {
+    "refresh": {
+      "name": "Aggiorna i dati JBL ProScan",
+      "description": "Aggiorna immediatamente i dati JBL ProScan da myJBL.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Voce di configurazione",
+          "description": "Opzionale. Lascia vuoto per aggiornare tutti i laghetti e acquari."
+        }
       }
     }
   }

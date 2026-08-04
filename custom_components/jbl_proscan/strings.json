@@ -36,7 +36,8 @@
       "init": {
         "title": "JBL ProScan options",
         "data": {
-          "scan_interval": "Update interval"
+          "scan_interval": "Update interval",
+          "reminder_days": "Reminder after (days)"
         }
       }
     }
@@ -67,11 +68,43 @@
       "last_analysis": {
         "name": "Last analysis"
       },
-      "measurement_count": {
-        "name": "Analysis count"
-      },
       "history": {
         "name": "History"
+      }
+    },
+    "binary_sensor": {
+      "ph_ok": {
+        "name": "pH OK"
+      },
+      "kh_ok": {
+        "name": "Carbonate hardness (KH) OK"
+      },
+      "gh_ok": {
+        "name": "General hardness (GH) OK"
+      },
+      "no2_high": {
+        "name": "Nitrite (NO₂) high"
+      },
+      "no3_high": {
+        "name": "Nitrate (NO₃) high"
+      },
+      "chlorine_high": {
+        "name": "Chlorine high"
+      },
+      "analysis_overdue": {
+        "name": "Analysis overdue"
+      }
+    }
+  },
+  "services": {
+    "refresh": {
+      "name": "Refresh JBL ProScan data",
+      "description": "Immediately refresh JBL ProScan data from myJBL.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Configuration entry",
+          "description": "Optional configuration entry ID. Leave empty to refresh all configured ponds and aquariums."
+        }
       }
     }
   }

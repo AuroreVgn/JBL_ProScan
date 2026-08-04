@@ -25,10 +25,14 @@ from .const import (
     CONF_AQUARIUM_ID,
     CONF_EMAIL,
     CONF_SCAN_INTERVAL,
+    CONF_REMINDER_DAYS,
     DEFAULT_SCAN_INTERVAL,
+    DEFAULT_REMINDER_DAYS,
     DOMAIN,
     MAX_SCAN_INTERVAL,
     MIN_SCAN_INTERVAL,
+    MAX_REMINDER_DAYS,
+    MIN_REMINDER_DAYS,
 )
 from .exceptions import (
     JBLProScanAuthenticationError,
@@ -40,7 +44,7 @@ from .exceptions import (
 class JBLProScanConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a JBL ProScan config flow."""
 
-    VERSION = 1
+    VERSION = 4
 
     def __init__(self) -> None:
         """Initialize the flow."""
@@ -149,7 +153,19 @@ class JBLProScanConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                             options=options,
                             mode=SelectSelectorMode.DROPDOWN,
                         )
-                    )
+                    ),
+                    vol.Required(
+                        CONF_REMINDER_DAYS,
+                        default=self._config_entry.options.get(CONF_REMINDER_DAYS, DEFAULT_REMINDER_DAYS),
+                    ): NumberSelector(
+                        NumberSelectorConfig(
+                            min=MIN_REMINDER_DAYS,
+                            max=MAX_REMINDER_DAYS,
+                            step=1,
+                            mode=NumberSelectorMode.BOX,
+                            unit_of_measurement="days",
+                        )
+                    ),
                 }
             ),
             errors=errors,
@@ -193,7 +209,21 @@ class JBLProScanOptionsFlow(config_entries.OptionsFlow):
                             mode=NumberSelectorMode.BOX,
                             unit_of_measurement="min",
                         )
-                    )
+                    ),
+                    vol.Required(
+                        CONF_REMINDER_DAYS,
+                        default=self._config_entry.options.get(
+                            CONF_REMINDER_DAYS, DEFAULT_REMINDER_DAYS
+                        ),
+                    ): NumberSelector(
+                        NumberSelectorConfig(
+                            min=MIN_REMINDER_DAYS,
+                            max=MAX_REMINDER_DAYS,
+                            step=1,
+                            mode=NumberSelectorMode.BOX,
+                            unit_of_measurement="days",
+                        )
+                    ),
                 }
             ),
         )
