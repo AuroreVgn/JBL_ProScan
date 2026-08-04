@@ -1,0 +1,78 @@
+{
+  "title": "JBL ProScan",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to myJBL",
+        "description": "Enter your myJBL account credentials. Available ponds and aquariums will be discovered automatically.",
+        "data": {
+          "email": "Email address",
+          "password": "Password",
+          "scan_interval": "Update interval"
+        }
+      },
+      "aquarium": {
+        "title": "Select pond or aquarium",
+        "description": "Select the pond or aquarium whose analyses should be imported.",
+        "data": {
+          "aquarium_id": "Pond or aquarium"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to JBL.",
+      "invalid_auth": "Invalid email address or password.",
+      "invalid_aquarium": "The pond, aquarium, or its analyses could not be found.",
+      "no_aquariums": "No pond or aquarium with analyses was found in this account.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This pond or aquarium is already configured.",
+      "discovery_expired": "Pond discovery expired. Please restart the configuration."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "JBL ProScan options",
+        "data": {
+          "scan_interval": "Update interval"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ph": {
+        "name": "pH"
+      },
+      "kh": {
+        "name": "Carbonate hardness (KH)"
+      },
+      "gh": {
+        "name": "General hardness (GH)"
+      },
+      "no2": {
+        "name": "Nitrite (NO₂)"
+      },
+      "no3": {
+        "name": "Nitrate (NO₃)"
+      },
+      "co2": {
+        "name": "Carbon dioxide (CO₂)"
+      },
+      "chlorine": {
+        "name": "Chlorine"
+      },
+      "last_analysis": {
+        "name": "Last analysis"
+      },
+      "measurement_count": {
+        "name": "Analysis count"
+      },
+      "history": {
+        "name": "History"
+      }
+    }
+  }
+}

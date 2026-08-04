@@ -1,0 +1,58 @@
+{
+  "title": "JBL ProScan",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connexion à myJBL",
+        "description": "Saisissez les identifiants de votre compte myJBL. Les bassins et aquariums disponibles seront détectés automatiquement.",
+        "data": {
+          "email": "Adresse e-mail",
+          "password": "Mot de passe",
+          "scan_interval": "Intervalle d’actualisation"
+        }
+      },
+      "aquarium": {
+        "title": "Sélection du bassin",
+        "description": "Sélectionnez le bassin ou l’aquarium dont vous souhaitez importer les analyses.",
+        "data": {
+          "aquarium_id": "Bassin ou aquarium"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossible de se connecter à JBL.",
+      "invalid_auth": "Adresse e-mail ou mot de passe incorrect.",
+      "invalid_aquarium": "Le bassin ou ses analyses sont introuvables.",
+      "no_aquariums": "Aucun bassin ou aquarium avec des analyses n’a été trouvé dans ce compte.",
+      "unknown": "Une erreur inattendue s’est produite."
+    },
+    "abort": {
+      "already_configured": "Ce bassin est déjà configuré.",
+      "discovery_expired": "La détection des bassins a expiré. Veuillez recommencer la configuration."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options JBL ProScan",
+        "data": {
+          "scan_interval": "Intervalle d’actualisation"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ph": {"name": "pH"},
+      "kh": {"name": "Dureté carbonatée (KH)"},
+      "gh": {"name": "Dureté totale (GH)"},
+      "no2": {"name": "Nitrites (NO₂)"},
+      "no3": {"name": "Nitrates (NO₃)"},
+      "co2": {"name": "Dioxyde de carbone (CO₂)"},
+      "chlorine": {"name": "Chlore"},
+      "last_analysis": {"name": "Dernière analyse"},
+      "measurement_count": {"name": "Nombre d’analyses"},
+      "history": {"name": "Historique"}
+    }
+  }
+}

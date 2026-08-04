@@ -1,0 +1,78 @@
+{
+  "title": "JBL ProScan",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connetti a myJBL",
+        "description": "Inserisci le credenziali del tuo account myJBL. I laghetti e gli acquari disponibili verranno rilevati automaticamente.",
+        "data": {
+          "email": "Indirizzo e-mail",
+          "password": "Password",
+          "scan_interval": "Intervallo di aggiornamento"
+        }
+      },
+      "aquarium": {
+        "title": "Seleziona laghetto o acquario",
+        "description": "Seleziona il laghetto o l’acquario di cui importare le analisi.",
+        "data": {
+          "aquarium_id": "Laghetto o acquario"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossibile connettersi a JBL.",
+      "invalid_auth": "Indirizzo e-mail o password non validi.",
+      "invalid_aquarium": "Il laghetto, l’acquario o le relative analisi non sono stati trovati.",
+      "no_aquariums": "In questo account non è stato trovato alcun laghetto o acquario con analisi.",
+      "unknown": "Si è verificato un errore imprevisto."
+    },
+    "abort": {
+      "already_configured": "Questo laghetto o acquario è già configurato.",
+      "discovery_expired": "Il rilevamento dei laghetti e degli acquari è scaduto. Riavvia la configurazione."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opzioni JBL ProScan",
+        "data": {
+          "scan_interval": "Intervallo di aggiornamento"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ph": {
+        "name": "pH"
+      },
+      "kh": {
+        "name": "Durezza carbonatica (KH)"
+      },
+      "gh": {
+        "name": "Durezza totale (GH)"
+      },
+      "no2": {
+        "name": "Nitriti (NO₂)"
+      },
+      "no3": {
+        "name": "Nitrati (NO₃)"
+      },
+      "co2": {
+        "name": "Anidride carbonica (CO₂)"
+      },
+      "chlorine": {
+        "name": "Cloro"
+      },
+      "last_analysis": {
+        "name": "Ultima analisi"
+      },
+      "measurement_count": {
+        "name": "Numero di analisi"
+      },
+      "history": {
+        "name": "Cronologia"
+      }
+    }
+  }
+}

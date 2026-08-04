@@ -1,0 +1,78 @@
+{
+  "title": "JBL ProScan",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Conectar con myJBL",
+        "description": "Introduce las credenciales de tu cuenta myJBL. Los estanques y acuarios disponibles se detectarán automáticamente.",
+        "data": {
+          "email": "Dirección de correo electrónico",
+          "password": "Contraseña",
+          "scan_interval": "Intervalo de actualización"
+        }
+      },
+      "aquarium": {
+        "title": "Seleccionar estanque o acuario",
+        "description": "Selecciona el estanque o acuario cuyas mediciones deseas importar.",
+        "data": {
+          "aquarium_id": "Estanque o acuario"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "No se puede conectar con JBL.",
+      "invalid_auth": "La dirección de correo electrónico o la contraseña no son válidas.",
+      "invalid_aquarium": "No se ha encontrado el estanque, el acuario o sus mediciones.",
+      "no_aquariums": "No se ha encontrado ningún estanque o acuario con mediciones en esta cuenta.",
+      "unknown": "Se ha producido un error inesperado."
+    },
+    "abort": {
+      "already_configured": "Este estanque o acuario ya está configurado.",
+      "discovery_expired": "La detección de estanques y acuarios ha caducado. Reinicia la configuración."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opciones de JBL ProScan",
+        "data": {
+          "scan_interval": "Intervalo de actualización"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ph": {
+        "name": "pH"
+      },
+      "kh": {
+        "name": "Dureza de carbonatos (KH)"
+      },
+      "gh": {
+        "name": "Dureza total (GH)"
+      },
+      "no2": {
+        "name": "Nitritos (NO₂)"
+      },
+      "no3": {
+        "name": "Nitratos (NO₃)"
+      },
+      "co2": {
+        "name": "Dióxido de carbono (CO₂)"
+      },
+      "chlorine": {
+        "name": "Cloro"
+      },
+      "last_analysis": {
+        "name": "Último análisis"
+      },
+      "measurement_count": {
+        "name": "Número de análisis"
+      },
+      "history": {
+        "name": "Historial"
+      }
+    }
+  }
+}

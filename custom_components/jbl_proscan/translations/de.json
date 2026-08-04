@@ -1,0 +1,78 @@
+{
+  "title": "JBL ProScan",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Mit myJBL verbinden",
+        "description": "Gib die Zugangsdaten deines myJBL-Kontos ein. Verfügbare Teiche und Aquarien werden automatisch erkannt.",
+        "data": {
+          "email": "E-Mail-Adresse",
+          "password": "Passwort",
+          "scan_interval": "Aktualisierungsintervall"
+        }
+      },
+      "aquarium": {
+        "title": "Teich oder Aquarium auswählen",
+        "description": "Wähle den Teich oder das Aquarium aus, dessen Analysen importiert werden sollen.",
+        "data": {
+          "aquarium_id": "Teich oder Aquarium"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung zu JBL nicht möglich.",
+      "invalid_auth": "Ungültige E-Mail-Adresse oder ungültiges Passwort.",
+      "invalid_aquarium": "Der Teich, das Aquarium oder die zugehörigen Analysen wurden nicht gefunden.",
+      "no_aquariums": "In diesem Konto wurde kein Teich oder Aquarium mit Analysen gefunden.",
+      "unknown": "Ein unerwarteter Fehler ist aufgetreten."
+    },
+    "abort": {
+      "already_configured": "Dieser Teich oder dieses Aquarium ist bereits konfiguriert.",
+      "discovery_expired": "Die Erkennung der Teiche und Aquarien ist abgelaufen. Bitte starte die Konfiguration erneut."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "JBL ProScan-Optionen",
+        "data": {
+          "scan_interval": "Aktualisierungsintervall"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ph": {
+        "name": "pH"
+      },
+      "kh": {
+        "name": "Karbonathärte (KH)"
+      },
+      "gh": {
+        "name": "Gesamthärte (GH)"
+      },
+      "no2": {
+        "name": "Nitrit (NO₂)"
+      },
+      "no3": {
+        "name": "Nitrat (NO₃)"
+      },
+      "co2": {
+        "name": "Kohlendioxid (CO₂)"
+      },
+      "chlorine": {
+        "name": "Chlor"
+      },
+      "last_analysis": {
+        "name": "Letzte Analyse"
+      },
+      "measurement_count": {
+        "name": "Anzahl der Analysen"
+      },
+      "history": {
+        "name": "Verlauf"
+      }
+    }
+  }
+}

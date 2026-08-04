@@ -1,0 +1,6 @@
+{
+  "name": "JBL ProScan for Home Assistant",
+  "version": "1.0.0",
+  "content": ["integration", "lovelace-card"],
+  "domain": "jbl_proscan"
+}

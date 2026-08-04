@@ -1,0 +1,78 @@
+{
+  "title": "JBL ProScan",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Ligar ao myJBL",
+        "description": "Introduza as credenciais da sua conta myJBL. Os lagos e aquários disponíveis serão detetados automaticamente.",
+        "data": {
+          "email": "Endereço de e-mail",
+          "password": "Palavra-passe",
+          "scan_interval": "Intervalo de atualização"
+        }
+      },
+      "aquarium": {
+        "title": "Selecionar lago ou aquário",
+        "description": "Selecione o lago ou aquário cujas análises pretende importar.",
+        "data": {
+          "aquarium_id": "Lago ou aquário"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Não foi possível ligar ao JBL.",
+      "invalid_auth": "Endereço de e-mail ou palavra-passe inválidos.",
+      "invalid_aquarium": "Não foi possível encontrar o lago, o aquário ou as respetivas análises.",
+      "no_aquariums": "Não foi encontrado nenhum lago ou aquário com análises nesta conta.",
+      "unknown": "Ocorreu um erro inesperado."
+    },
+    "abort": {
+      "already_configured": "Este lago ou aquário já está configurado.",
+      "discovery_expired": "A deteção de lagos e aquários expirou. Reinicie a configuração."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opções do JBL ProScan",
+        "data": {
+          "scan_interval": "Intervalo de atualização"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ph": {
+        "name": "pH"
+      },
+      "kh": {
+        "name": "Dureza de carbonatos (KH)"
+      },
+      "gh": {
+        "name": "Dureza total (GH)"
+      },
+      "no2": {
+        "name": "Nitritos (NO₂)"
+      },
+      "no3": {
+        "name": "Nitratos (NO₃)"
+      },
+      "co2": {
+        "name": "Dióxido de carbono (CO₂)"
+      },
+      "chlorine": {
+        "name": "Cloro"
+      },
+      "last_analysis": {
+        "name": "Última análise"
+      },
+      "measurement_count": {
+        "name": "Número de análises"
+      },
+      "history": {
+        "name": "Histórico"
+      }
+    }
+  }
+}

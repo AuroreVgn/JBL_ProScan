@@ -1,0 +1,78 @@
+{
+  "title": "JBL ProScan",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Verbinden met myJBL",
+        "description": "Voer de inloggegevens van je myJBL-account in. Beschikbare vijvers en aquaria worden automatisch gedetecteerd.",
+        "data": {
+          "email": "E-mailadres",
+          "password": "Wachtwoord",
+          "scan_interval": "Vernieuwingsinterval"
+        }
+      },
+      "aquarium": {
+        "title": "Vijver of aquarium selecteren",
+        "description": "Selecteer de vijver of het aquarium waarvan je de analyses wilt importeren.",
+        "data": {
+          "aquarium_id": "Vijver of aquarium"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kan geen verbinding maken met JBL.",
+      "invalid_auth": "Ongeldig e-mailadres of wachtwoord.",
+      "invalid_aquarium": "De vijver, het aquarium of de analyses zijn niet gevonden.",
+      "no_aquariums": "In dit account is geen vijver of aquarium met analyses gevonden.",
+      "unknown": "Er is een onverwachte fout opgetreden."
+    },
+    "abort": {
+      "already_configured": "Deze vijver of dit aquarium is al geconfigureerd.",
+      "discovery_expired": "De detectie van vijvers en aquaria is verlopen. Start de configuratie opnieuw."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "JBL ProScan-opties",
+        "data": {
+          "scan_interval": "Vernieuwingsinterval"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ph": {
+        "name": "pH"
+      },
+      "kh": {
+        "name": "Carbonaathardheid (KH)"
+      },
+      "gh": {
+        "name": "Totale hardheid (GH)"
+      },
+      "no2": {
+        "name": "Nitriet (NO₂)"
+      },
+      "no3": {
+        "name": "Nitraat (NO₃)"
+      },
+      "co2": {
+        "name": "Koolstofdioxide (CO₂)"
+      },
+      "chlorine": {
+        "name": "Chloor"
+      },
+      "last_analysis": {
+        "name": "Laatste analyse"
+      },
+      "measurement_count": {
+        "name": "Aantal analyses"
+      },
+      "history": {
+        "name": "Geschiedenis"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "domain": "jbl_proscan",
+  "name": "JBL ProScan",
+  "codeowners": [
+    "@AuroreVgn"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/AuroreVgn/home-assistant-jbl-proscan",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "1.0.0",
+  "issue_tracker": "https://github.com/AuroreVgn/home-assistant-jbl-proscan/issues"
+}
