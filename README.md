@@ -39,7 +39,7 @@ A Home Assistant custom integration for **JBL ProScan** allowing you to retrieve
 ### Dashboard
 <img width="242" height="291" alt="image" src="https://github.com/user-attachments/assets/6cddf462-4f09-4289-af0e-04f7684302eb" />
 
-Lovelace card available **here**.
+Lovelace card available **[here](https://github.com/AuroreVgn/JBL_ProScan_card/)**.
 
 ## Installation
 
@@ -100,7 +100,6 @@ This project is **not affiliated with JBL GmbH & Co. KG**.
 
 ## License
 This project is distributed under the MIT License.
-``LICENSE``
 
 [releases-shield]: https://img.shields.io/github/v/release/AuroreVgn/JBL_ProScan?style=flat-square
 [releases]: https://github.com/AuroreVgn/JBL_ProScan/releases
