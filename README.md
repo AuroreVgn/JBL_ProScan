@@ -26,7 +26,7 @@ A Home Assistant custom integration for **JBL ProScan** allowing you to retrieve
 - Number of recorded analyses
 - Last analysis date
 - Days since the last analysis
--  Multi-language support : 🇫🇷 🇬🇧 🇩🇪 🇪🇸 🇮🇹 🇳🇱 🇵🇹
+- Multi-language support : 🇫🇷 🇬🇧 🇩🇪 🇪🇸 🇮🇹 🇳🇱 🇵🇹
 
 ## Screenshots
 
