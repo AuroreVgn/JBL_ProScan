@@ -49,11 +49,11 @@ A Home Assistant custom integration for **JBL ProScan** allowing you to retrieve
 <img width="285" src="https://github.com/user-attachments/assets/09e357ca-72af-489c-bd66-f16c78006d31"/>
 
 ### Entities
+<img width="150" height="407" alt="image" src="https://github.com/user-attachments/assets/04da4e02-f774-4e2f-98c3-c452e3ff5f17" />
 
-TO UPDATE
 
 ### Dashboard
-➡️ **https://github.com/AuroreVgn/JBL_ProScan_card**
+➡️ https://github.com/AuroreVgn/JBL_ProScan_card
 
 
 ## Installation
