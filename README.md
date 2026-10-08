@@ -11,7 +11,7 @@
 Discover all my Home Assistant integrations and projects on my dedicated page: [**🏠 Discover my Home Assistant Projects**](https://gentle-suggestion-7c3.notion.site/Mes-projets-Home-Assistant-3eda02eefa8f81a48621c3caeef7fa8e)
 
 
-## ☕️ Support the project
+## ☕ Support the project
 
 If you find this integration useful and would like to support its development and maintenance:
 
@@ -38,7 +38,7 @@ A Home Assistant custom integration for **JBL ProScan** allowing you to retrieve
 - 🌍 Multi-language support
 - ⚡ Native Home Assistant Config Flow
 
-## Installation
+## 📦 Installation
 ### HACS (recommended)
 #### Add the repository
 
@@ -69,7 +69,7 @@ HACS
 
 Restart Home Assistant.
 
-## Configuration
+## ⚙️ Configuration
 Go to
 
 ```
@@ -85,7 +85,7 @@ Enter
 
 Then simply choose the pond (or aquarium) to import.
 
-## Sensors
+## 📊 Sensors
 ### Water parameters
 - pH
 - KH
@@ -109,7 +109,7 @@ Then simply choose the pond (or aquarium) to import.
 - Chlorine High
 - Analysis overdue
 
-## Created entities
+## 📊 Created entities
 ### Sensors
 
 | Entity | Unit |
@@ -155,7 +155,7 @@ Perfect for dashboards and automations.
 Thanks to the binary sensors you can easily create automations such as:
 - Remind you when no analysis has been performed for X days.
 
-## Screenshots
+## 📸 Screenshots
 
 ### Setup
 <img width="450" src="https://github.com/user-attachments/assets/09e357ca-72af-489c-bd66-f16c78006d31"/>
@@ -168,7 +168,7 @@ Thanks to the binary sensors you can easily create automations such as:
 ➡️ https://github.com/AuroreVgn/JBL_ProScan_card
 
 
-## Companion Lovelace Card
+## 🧩 Companion Lovelace Card
 A dedicated Lovelace card is available ➡️ https://github.com/AuroreVgn/JBL_ProScan_card
 
 Features include:
@@ -184,13 +184,13 @@ Features include:
 - 🧩 Visual editor
 
 
-## Credits
+## 🙏 Credits
 Developed by **AuroreVgn**
 Special thanks to the Home Assistant community.
 This project is **not affiliated with JBL GmbH & Co. KG**.
 
 
-## License
+## 📄 License
 Distributed under the MIT License.
 
 
