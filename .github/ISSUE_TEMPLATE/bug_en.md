@@ -1,8 +1,10 @@
 ---
-name: "🐞 Report a bug (EN)"
-about: "Report a problem with the JBL ProScan Home Assistant integration"
+name: "\U0001F41E Report a bug (EN)"
+about: Report a problem with the JBL ProScan Home Assistant integration
 title: "[BUG] - "
+labels: ''
 assignees: AuroreVgn
+
 ---
 
 ### Integration version

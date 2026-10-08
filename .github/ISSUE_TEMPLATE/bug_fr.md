@@ -1,8 +1,10 @@
 ---
-name: "🐞 Signaler un bug (FR)"
-about: "Signaler un dysfonctionnement de la intégration Home Assistant JBL ProScan"
+name: "\U0001F41E Signaler un bug (FR)"
+about: Signaler un dysfonctionnement de la intégration Home Assistant JBL ProScan
 title: "[BUG] - "
+labels: ''
 assignees: AuroreVgn
+
 ---
 
 ### Version de l'intégration

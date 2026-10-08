@@ -1,8 +1,10 @@
 ---
-name: "💬 Other request (EN)"
-about: "Ask a question or make another request about JBL ProScan"
+name: "\U0001F4AC Other request (EN)"
+about: Ask a question or make another request about JBL ProScan
 title: "[QUESTION] - "
+labels: ''
 assignees: AuroreVgn
+
 ---
 
 ### Request

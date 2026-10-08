@@ -1,8 +1,10 @@
 ---
-name: "💡 Suggest an improvement (EN)"
-about: "Suggest a feature or improvement for JBL ProScan"
+name: "\U0001F4A1 Suggest an improvement (EN)"
+about: Suggest a feature or improvement for JBL ProScan
 title: "[ENHANCEMENT] - "
+labels: ''
 assignees: AuroreVgn
+
 ---
 
 ### Integration version (optional)
