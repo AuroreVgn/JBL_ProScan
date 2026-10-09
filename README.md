@@ -38,6 +38,14 @@ A Home Assistant custom integration for **JBL ProScan** allowing you to retrieve
 - 🌍 Multi-language support
 - ⚡ Native Home Assistant Config Flow
 
+## 📸 Screenshots
+
+### Setup
+<img width="450" src="https://github.com/user-attachments/assets/09e357ca-72af-489c-bd66-f16c78006d31"/>
+
+### Entities
+<img width="250" alt="image" src="https://github.com/user-attachments/assets/04da4e02-f774-4e2f-98c3-c452e3ff5f17" />
+
 ## 📦 Installation
 ### HACS (recommended)
 #### Add the repository
@@ -154,14 +162,6 @@ Perfect for dashboards and automations.
 ### Automations
 Thanks to the binary sensors you can easily create automations such as:
 - Remind you when no analysis has been performed for X days.
-
-## 📸 Screenshots
-
-### Setup
-<img width="450" src="https://github.com/user-attachments/assets/09e357ca-72af-489c-bd66-f16c78006d31"/>
-
-### Entities
-<img width="250" alt="image" src="https://github.com/user-attachments/assets/04da4e02-f774-4e2f-98c3-c452e3ff5f17" />
 
 
 ### Dashboard
