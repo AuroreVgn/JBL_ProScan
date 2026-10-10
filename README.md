@@ -6,193 +6,199 @@
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=flat-square)](https://hacs.xyz/)
 [![Maintainer](https://img.shields.io/badge/Maintainer-AuroreVgn-blue.svg?style=flat-square)](https://github.com/AuroreVgn)
 
-## 🏠 My Home Assistant Projects
+## 🏠 Mes projets Home Assistant
 
-Discover all my Home Assistant integrations and projects on my dedicated page: [**🏠 Discover my Home Assistant Projects**](https://gentle-suggestion-7c3.notion.site/Mes-projets-Home-Assistant-3eda02eefa8f81a48621c3caeef7fa8e)
+Retrouvez l'ensemble de mes intégrations et projets Home Assistant sur ma page dédiée : [**🏠 Découvrir mes projets Home Assistant**](https://gentle-suggestion-7c3.notion.site/Mes-projets-Home-Assistant-3eda02eefa8f81a48621c3caeef7fa8e)
 
+## ☕ Soutenir le projet
 
-## ☕ Support the project
-
-If you find this integration useful and would like to support its development and maintenance:
+Si cette intégration vous est utile et que vous souhaitez soutenir son développement et sa maintenance :
 
 <p>
   <a href="https://ko-fi.com/aurorevgn">
-    <img src="https://storage.ko-fi.com/cdn/kofi4.png?v=3"
-         alt="Support me on Ko-fi"
-         height="45">
+    <img src="https://storage.ko-fi.com/cdn/kofi4.png?v=3" alt="Soutenir sur Ko-fi" height="45">
   </a>
 </p>
 
+## 🌍 Other languages
+
+[English](README.en.md)
+
 ## ⚠️ Important
 
-A Home Assistant custom integration for **JBL ProScan** allowing you to retrieve your **pond** or **aquarium** water analyses directly from your **myJBL** account.
+Intégration personnalisée Home Assistant pour **JBL ProScan**, permettant de récupérer les analyses d'eau de votre **bassin** ou **aquarium** directement depuis votre compte **myJBL**.
 
-## ✨ Features
+## ✨ Fonctionnalités
 
-- 🔐 Secure authentication to **myJBL**
-- 🌊 Automatic pond / aquarium selection
-- 📊 Complete analysis history
-- 🔄 Manual refresh service
-- 📈 Long-Term Statistics compatible
-- 🤖 Binary sensors for automations
-- 🌍 Multi-language support
-- ⚡ Native Home Assistant Config Flow
+- 🔐 Authentification sécurisée à **myJBL**
+- 🌊 Sélection automatique des bassins et aquariums
+- 📊 Historique complet des analyses
+- 🔄 Service d'actualisation manuelle
+- 📈 Compatibilité avec les statistiques longue durée
+- 🤖 Capteurs binaires pour les automatisations
+- 🌍 Prise en charge de plusieurs langues
+- ⚡ Configuration native via l'interface Home Assistant
 
-## 📸 Screenshots
+## 📸 Captures d'écran
 
-### Setup
+### Configuration
 <img width="450" src="https://github.com/user-attachments/assets/09e357ca-72af-489c-bd66-f16c78006d31"/>
 
-### Entities
-<img width="250" alt="image" src="https://github.com/user-attachments/assets/04da4e02-f774-4e2f-98c3-c452e3ff5f17" />
+### Entités
+<img width="250" alt="Entités JBL ProScan" src="https://github.com/user-attachments/assets/04da4e02-f774-4e2f-98c3-c452e3ff5f17" />
 
 ## 📦 Installation
-### HACS (recommended)
-#### Add the repository
 
-Automatically
-[![Open your Home Assistant instance and open this repository inside HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=AuroreVgn&repository=JBL_ProScan&category=integration)
+### HACS (recommandé)
 
-Or manually
+#### Ajouter le dépôt
 
-```
+Automatiquement :
+
+[![Ouvrir ce dépôt dans HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=AuroreVgn&repository=JBL_ProScan&category=integration)
+
+Ou manuellement :
+
+```text
 HACS
- └── Integrations
+ └── Intégrations
       └── ⋮
-           └── Custom repositories
+           └── Dépôts personnalisés
 
-Repository:
+Dépôt :
 https://github.com/AuroreVgn/JBL_ProScan
 
-Category:
+Catégorie :
 Integration
 ```
 
-#### Install
-```
+#### Installer
+
+```text
 HACS
  └── JBL ProScan
-      └── Download
+      └── Télécharger
 ```
 
-Restart Home Assistant.
+Redémarrez Home Assistant.
 
 ## ⚙️ Configuration
-Go to
 
-```
-Settings
-→ Devices & Services
-→ Add Integration
+Accédez à :
+
+```text
+Paramètres
+→ Appareils et services
+→ Ajouter une intégration
 → JBL ProScan
 ```
 
-Enter
-- myJBL email
-- myJBL password
+Renseignez votre adresse e-mail et votre mot de passe **myJBL**, puis sélectionnez le bassin ou l'aquarium à importer.
 
-Then simply choose the pond (or aquarium) to import.
+## 📊 Capteurs
 
-## 📊 Sensors
-### Water parameters
+### Paramètres de l'eau
 - pH
 - KH
 - GH
 - NO₂
 - NO₃
 - CO₂
-- Chlorine
+- Chlore
 
-### Additional sensors
-- History
-- Last analysis
-- Days since last analysis
+### Capteurs supplémentaires
+- Historique
+- Dernière analyse
+- Nombre de jours depuis la dernière analyse
 
-### Binary sensors
+### Capteurs binaires
 - pH OK
 - KH OK
 - GH OK
-- Nitrite High
-- Nitrate High
-- Chlorine High
-- Analysis overdue
+- Nitrites élevés
+- Nitrates élevés
+- Chlore élevé
+- Analyse en retard
 
-## 📊 Created entities
-### Sensors
+## 📊 Entités créées
 
-| Entity | Unit |
-|---------|------|
+### Capteurs
+
+| Entité | Unité |
+|---|---|
 | pH | — |
 | KH | °dKH |
 | GH | °dGH |
 | NO₂ | mg/L |
 | NO₃ | mg/L |
 | CO₂ | mg/L |
-| Chlorine | mg/L |
-| History | analyses |
-| Last analysis | Date |
-| Days since last analysis | day |
+| Chlore | mg/L |
+| Historique | analyses |
+| Dernière analyse | Date |
+| Jours depuis la dernière analyse | jour |
 
-All measurement sensors are compatible with **Home Assistant Long-Term Statistics**.
+Tous les capteurs de mesure sont compatibles avec les **statistiques longue durée de Home Assistant**.
 
-### Binary sensors
-The integration also creates binary sensors designed for automations.
+### Capteurs binaires
+
+L'intégration crée également des capteurs binaires destinés aux automatisations :
 - pH OK
 - KH OK
 - GH OK
-- Nitrite High
-- Nitrate High
-- Chlorine High
-- Analysis overdue
+- Nitrites élevés
+- Nitrates élevés
+- Chlore élevé
+- Analyse en retard
 
 ### Services
 
-The integration provides the following service:
+L'intégration fournit le service suivant :
 
-#### Refresh data
+#### Actualiser les données
 
-```
+```text
 jbl_proscan.refresh
 ```
 
-Refreshes the selected pond immediately without waiting for the next scheduled update.
+Actualise immédiatement les données du bassin sélectionné, sans attendre la prochaine mise à jour programmée.
 
-Perfect for dashboards and automations.
+Ce service peut être utilisé dans les tableaux de bord et les automatisations.
 
-### Automations
-Thanks to the binary sensors you can easily create automations such as:
-- Remind you when no analysis has been performed for X days.
+### Automatisations
 
+Les capteurs binaires permettent notamment de créer un rappel lorsqu'aucune analyse n'a été réalisée depuis un certain nombre de jours.
 
-### Dashboard
+### Tableau de bord
+
 ➡️ https://github.com/AuroreVgn/JBL_ProScan_card
 
+## 🧩 Carte Lovelace associée
 
-## 🧩 Companion Lovelace Card
-A dedicated Lovelace card is available ➡️ https://github.com/AuroreVgn/JBL_ProScan_card
+Une carte Lovelace dédiée est disponible : https://github.com/AuroreVgn/JBL_ProScan_card
 
-Features include:
-- 📈 Interactive graphs
-- 🎨 Custom colors
-- 🎭 Custom icons
-- 🌍 Multi-language
-- 🔄 Manual refresh
-- 📅 Period selector
-- 📊 Previous analysis comparison
-- 📉 Recommended JBL ranges
-- 🖱 Interactive tooltips
-- 🧩 Visual editor
+Ses fonctionnalités comprennent :
+- 📈 Graphiques interactifs
+- 🎨 Couleurs personnalisées
+- 🎭 Icônes personnalisées
+- 🌍 Plusieurs langues
+- 🔄 Actualisation manuelle
+- 📅 Sélection de période
+- 📊 Comparaison avec l'analyse précédente
+- 📉 Plages recommandées JBL
+- 🖱 Infobulles interactives
+- 🧩 Éditeur visuel
 
+## 🙏 Remerciements
 
-## 🙏 Credits
-Developed by **AuroreVgn**
-Special thanks to the Home Assistant community.
-This project is **not affiliated with JBL GmbH & Co. KG**.
+Développé par **AuroreVgn**.
 
+Merci à la communauté Home Assistant.
 
-## 📄 License
-Distributed under the MIT License.
+Ce projet **n'est pas affilié à JBL GmbH & Co. KG**.
 
+## 📄 Licence
+
+Distribué sous licence MIT.
 
 [releases-shield]: https://img.shields.io/github/v/release/AuroreVgn/JBL_ProScan?style=flat-square
 [releases]: https://github.com/AuroreVgn/JBL_ProScan/releases
